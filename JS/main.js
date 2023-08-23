@@ -166,4 +166,11 @@ console.log(combos)
 combos.push=(new Menu("almuerzo", "hamburguesa completa + gaseosa", 2300));
 console.log(combos)
 
+// creacion de un nodo: agregue un div en el body (el forEach recorre todos los items del arreglo menu y crea un div con la categoria, nombre y precio de los items recorridos)
+menu.forEach((item)=>{
+    let listado = document.createElement("div");
+    listado.innerHTML = `${item.categoria} - ${item.producto} - ${item.precio}`;
+    document.body.append(listado)
+})
+
 
